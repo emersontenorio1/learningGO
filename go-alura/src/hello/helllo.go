@@ -1,13 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello world")
-	imprimirNome()
-
-}
-
-func imprimirNome() {
-	fmt.Println("Emerson")
+	var nome string
+	fmt.Println("Qual o seu nome?")
+	fmt.Scan(&nome)
+	var idade int
+	fmt.Println("Digite sua idade?")
+	fmt.Scan(&idade)
+	var versao float32 = 1.1
+	fmt.Println("Olá senhor, ", nome, "sua idade é", idade)
+	fmt.Println("Este programa está na versão", versao)
 }
