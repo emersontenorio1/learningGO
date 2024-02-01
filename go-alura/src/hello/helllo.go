@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"reflect"
+	"time"
 )
 
 func main() {
@@ -14,6 +16,8 @@ func main() {
 		fmt.Print("Digite uma opção: ")
 		comando := lerComando()
 		fmt.Println("O comando escolhido foi: ", comando)
+
+		//exibenomes()
 
 		/*if comando == 1{
 
@@ -61,20 +65,42 @@ func exibeMenu() {
 }
 func lerComando() int {
 	var comandoLido int
-	fmt.Scanf("%d", &comandoLido)
+	fmt.Scan(&comandoLido)
 	return comandoLido
 }
 
 func iniciarMonitoramento() {
-	fmt.Print("Qual site deseja verificar: ")
-	var site string
-	fmt.Scan(&site)
+
+	/*var sites [4]string
+	sites[0] = "https://random-status-code.herokuapp.com/"
+	sites[1] = "https://www.alura.com.br"
+	sites[2] = "https://www.caelum.com.br"*/
+	sites := []string{
+		"https://random-status-code.herokuapp.com/",
+		"https://www.alura.com.br",
+		"https://www.caelum.com.br"}
+
 	fmt.Println("Iniciando Monitoramento .....")
+	for i := 0; i < 5; i++ {
+		for i, site := range sites {
+			fmt.Println("Testando site", i, ":", site)
+			testaSite(site)
+		}
+		time.Sleep(5 * time.Second)
+	}
+	fmt.Println("")
+}
+
+func testaSite(site string) {
 	resp, _ := http.Get(site)
 	if resp.StatusCode == 200 {
 		fmt.Println("Site:", site, "foi carregado com sucesso!")
 	} else {
 		fmt.Println("Site:", site, "está com problemas. Status Code:", resp.StatusCode)
 	}
-
+}
+func exibenomes() {
+	nomes := []string{"Emerson", "Bernado", "Matheus"}
+	reflect.TypeOf(nomes)
+	fmt.Print(cap(nomes))
 }
