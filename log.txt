@@ -1,0 +1,15 @@
+01/02/2024 21:30:10 https://random-status-code.herokuapp.com/ - Online: false
+01/02/2024 21:30:10 https://www.google.com.br - Online: true
+01/02/2024 21:30:10 https://www.terra.com.br - Online: true
+01/02/2024 21:30:16 https://random-status-code.herokuapp.com/ - Online: false
+01/02/2024 21:30:16 https://www.google.com.br - Online: true
+01/02/2024 21:30:16 https://www.terra.com.br - Online: true
+01/02/2024 21:30:22 https://random-status-code.herokuapp.com/ - Online: false
+01/02/2024 21:30:22 https://www.google.com.br - Online: true
+01/02/2024 21:30:22 https://www.terra.com.br - Online: true
+01/02/2024 21:30:29 https://random-status-code.herokuapp.com/ - Online: false
+01/02/2024 21:30:29 https://www.google.com.br - Online: true
+01/02/2024 21:30:29 https://www.terra.com.br - Online: true
+01/02/2024 21:30:35 https://random-status-code.herokuapp.com/ - Online: false
+01/02/2024 21:30:35 https://www.google.com.br - Online: true
+01/02/2024 21:30:35 https://www.terra.com.br - Online: true
